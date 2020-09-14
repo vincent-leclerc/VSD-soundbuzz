@@ -14,6 +14,8 @@ services:
       timeout: 3s
       retries: 3
       start_period: 30s
+    depends_on:
+      - mysql
     volumes:
       # Comment out the next line in production
       - ./:/srv/app:rw,cached
@@ -24,6 +26,17 @@ services:
       - /srv/app/var/sessions/
     environment:
       - SYMFONY_VERSION
+
+  mysql:
+    image: mysql
+    command: ["--default-authentication-plugin=mysql_native_password"]
+    ports:
+        - "3306:3306"
+    environment:
+        MYSQL_ROOT_PASSWORD: root
+        MYSQL_DATABASE: soundbuzz
+        MYSQL_USER: symfony
+        MYSQL_PASSWORD: symfony    
 
   nginx:
     build:

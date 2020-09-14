@@ -29,6 +29,7 @@ RUN set -eux; \
 	    zlib-dev \
 	; \
 	\
+	docker-php-ext-install pdo pdo_mysql zip; \
 	docker-php-ext-configure zip; \
 	docker-php-ext-install -j$(nproc) \
 	    intl \
