@@ -1,0 +1,12 @@
+.register_button {
+    background-color: #aa00ff;
+}
+
+.register_button:hover {
+    background-color: #fff !important;
+    color: #aa00ff;
+}
+
+.social_icons a i:hover {
+    color: #aa00ff !important;
+}
