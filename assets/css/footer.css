@@ -4,7 +4,7 @@
 
 .register_button:hover {
     background-color: #fff !important;
-    color: #aa00ff;
+    color: #aa00ff !important;
 }
 
 .social_icons a i:hover {
