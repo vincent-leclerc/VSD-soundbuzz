@@ -1,6 +1,4 @@
-*, *:before, *:after {
-    box-sizing: border-box;
-  }
+
   
   @keyframes spin {
     from {
@@ -10,12 +8,7 @@
       transform: rotate(360deg);
     }
   }
-  body, html {
-    min-height: 100vh;
-    background: #666;
-    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-    font-weight: 300;
-  }
+
   
   .table {
     display: table;
@@ -95,12 +88,7 @@
     user-select: none;
   }
   
-  h1 {
-    text-align: center;
-    font-size: 28px;
-    font-weight: normal;
-    letter-spacing: 1px;
-  }
+
   
   .stat {
     width: 50%;
@@ -130,17 +118,3 @@
     opacity: 0.3;
   }
   
-  button {
-    width: 100%;
-    -webkit-appearance: none;
-    line-height: 40px;
-    color: #fff;
-    border: none;
-    background-color: #ea4c89;
-    margin-top: 30px;
-    font-size: 13px;
-    -webkit-font-smoothing: antialiased;
-    font-weight: bold;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-  }
