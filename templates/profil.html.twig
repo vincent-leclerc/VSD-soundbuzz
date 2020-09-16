@@ -1,0 +1,54 @@
+{% extends "base.html.twig" %}
+
+
+{% block body %}
+       
+
+
+<form class="form-regis">
+
+<div class="">
+  <div class="">
+    <div class="">
+      <div id="profile">
+        <div class="dashes"></div>
+        <label>Cliquer pour modifier image</label></div>
+      <div class="editable"><i class="fa fa-pencil"></i><h1 contenteditable>Mon profil</h1></div>
+    
+    </div>
+  </div>
+</div>
+<input type="file" id="mediaFile" />
+
+  <label class="label-regis">
+    <p class="label-txt">Nom d'utilisateur</p>
+    <input type="text" class="input">
+    <div class="line-box">
+      <div class="line"></div>
+    </div>
+  </label>
+    <label class="label-regis">
+    <p class="label-txt">Mot de passe actuel</p>
+    <input type="text" class="input">
+    <div class="line-box">
+      <div class="line"></div>
+    </div>
+  </label>
+  <label class="label-regis">
+    <p class="label-txt">Nouveau mot de passe</p>
+    <input type="text" class="input">
+    <div class="line-box">
+      <div class="line"></div>
+    </div>
+  </label>
+  
+  <button  class="button-regis" type="submit">Envoyer</button>
+</form>
+<div class="img-footer">
+    <img src="{{ asset('build/images/logo.svg') }}" height="100" width = "100" alt="logo SoundBuzz footer">
+</div>
+<div>
+    <p class="footer"> soundbuzz depuis 2002 </p>
+
+</div>
+{% endblock %}
