@@ -33,9 +33,6 @@
 </header>
 <!-- Main navigation -->
 
-
-
-
 <div class="container my-5">
 
 
@@ -48,133 +45,25 @@
     <div class="row">
 
       <!-- First column -->
+
+      {% for song in songs %}
       <div class="col-lg-3 col-md-12 mb-4">
 
         <div class="view overlay z-depth-1">
-          <img src="{{ asset('build/images/album1.jpg') }}" class="img-fluid" alt="Sample image">
-          <div class="mask flex-center purple-gradient-rgba">
-            <a class="btn btn-outline-white btn-rounded">Écouter</a>
-          </div>
-        </div>
-        <p class="text-left mt-1 mb-0">Nom musique</p>
-        <p class="text-left text-muted mb-0">Nom artiste / label</p>
-
-      </div>
-      <!-- First column -->
-
-      <!-- Second column -->
-      <div class="col-lg-3 col-md-6 mb-4">
-
-        <div class="view overlay z-depth-1">
           <img src="{{ asset('build/images/album2.jpg') }}" class="img-fluid" alt="Sample image">
-          <div class=" mask flex-center purple-gradient-rgba">
-            <a class="btn btn-outline-white btn-rounded">Écouter</a>
-          </div>
-        </div>
-        <p class="text-left mt-1 mb-0">Nom musique</p>
-        <p class="text-left text-muted mb-0">Nom artiste / label</p>
-
-      </div>
-      <!-- Second column -->
-
-      <!-- Third column -->
-      <div class="col-lg-3 col-md-6 mb-4">
-
-        <div class="view overlay z-depth-1">
-          <img src="{{ asset('build/images/album3.jpg') }}" class="img-fluid" alt="Sample image">
-          <div class="mask flex-center purple-gradient-rgba">
-            <a class="btn  btn-outline-white btn-rounded">Écouter</a>
-          </div>
-        </div>
-        <p class="text-left mt-1 mb-0">Nom musique</p>
-        <p class="text-left text-muted mb-0">Nom artiste / label</p>
-
-      </div>
-      <!-- Third column -->
-      <!-- Forth column -->
-      <div class="col-lg-3 col-md-6 mb-4">
-
-        <div class="view overlay z-depth-1">
-          <img src="{{ asset('build/images/album4.jpg') }}" class="img-fluid" alt="Sample image">
-          <div class="mask flex-center purple-gradient-rgba">
-            <a class="btn  btn-outline-white btn-rounded">Écouter</a>
-          </div>
-        </div>
-        <p class="text-left mt-1 mb-0">Nom musique</p>
-        <p class="text-left text-muted mb-0">Nom artiste / label</p>
-
-      </div>
-      <!-- Forth column -->
-    </div>
-    <!-- First row -->
-
-    <!-- Second row -->
-    <div class="row">
-
-      <!-- First column -->
-      <div class="col-lg-3 col-md-12 mb-4">
-
-        <div class="view overlay z-depth-1">
-          <img src="{{ asset('build/images/album1.jpg') }}" class="img-fluid" alt="Sample image">
           <div class="mask flex-center purple-gradient-rgba">
             <a class="btn btn-outline-white btn-rounded">Écouter</a>
           </div>
         </div>
-        <p class="text-left mt-1 mb-0">Nom musique</p>
-        <p class="text-left text-muted mb-0">Nom artiste / label</p>
+        <p class="text-left mt-1 mb-0">{{ song.name }}</p>
+        <p class="text-left text-muted mb-0">{{ song.artist }}</p>
 
       </div>
-      <!-- First column -->
-
-      <!-- Second column -->
-      <div class="col-lg-3 col-md-6 mb-4">
-
-        <div class="view overlay z-depth-1">
-          <img src="{{ asset('build/images/album2.jpg') }}" class="img-fluid" alt="Sample image">
-          <div class=" mask flex-center purple-gradient-rgba">
-            <a class="btn btn-outline-white btn-rounded">Écouter</a>
-          </div>
-        </div>
-        <p class="text-left mt-1 mb-0">Nom musique</p>
-        <p class="text-left text-muted mb-0">Nom artiste / label</p>
-
-      </div>
-      <!-- Second column -->
-
-      <!-- Third column -->
-      <div class="col-lg-3 col-md-6 mb-4">
-
-        <div class="view overlay z-depth-1">
-          <img src="{{ asset('build/images/album3.jpg') }}" class="img-fluid" alt="Sample image">
-          <div class="mask flex-center purple-gradient-rgba">
-            <a class="btn  btn-outline-white btn-rounded">Écouter</a>
-          </div>
-        </div>
-        <p class="text-left mt-1 mb-0">Nom musique</p>
-        <p class="text-left text-muted mb-0">Nom artiste / label</p>
-
-      </div>
-      <!-- Third column -->
-      <!-- Forth column -->
-      <div class="col-lg-3 col-md-6 mb-4">
-
-        <div class="view overlay z-depth-1">
-          <img src="{{ asset('build/images/album4.jpg') }}" class="img-fluid" alt="Sample image">
-          <div class="mask flex-center purple-gradient-rgba">
-            <a class="btn  btn-outline-white btn-rounded">Écouter</a>
-          </div>
-        </div>
-        <p class="text-left mt-1 mb-0">Nom musique</p>
-        <p class="text-left text-muted mb-0">Nom artiste / label</p>
-
-      </div>
-      <!-- Forth column -->
+      {% endfor %}
     </div>
     <!-- Second row -->
 
   </section>
   <!-- Section: Block Content -->
-  
-  
 </div>
 {% endblock body %}
