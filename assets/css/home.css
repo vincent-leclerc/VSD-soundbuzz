@@ -1,0 +1,43 @@
+body {
+    background-color: #f5f5f5;
+}
+
+html,
+body,
+header,
+header .view {
+  height: 100%;
+}
+
+@media (max-width: 740px) {
+  html,
+  body,
+  header,
+  header .view {
+    height: 100vh;
+  }
+}
+
+header .view {
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    background-position: center center;
+    color: #fafafa;
+}
+
+.purple-gradient-rgba {
+    background: linear-gradient(40deg, rgba(170, 0, 255, 0.7), rgba(111, 0, 255, 0.7))!important;
+}
+
+.rgba-stylish-strong {
+    background-color: rgba(52, 58, 68, 0.7) !important;
+}
+
+header h1, header h4 {
+    text-shadow: #333 1px 1px 5px;
+}
+
+.know-more:hover {
+    color: rgb(170, 0, 255) !important;
+    border: 2px solid rgb(170, 0, 255) !important;
+}
