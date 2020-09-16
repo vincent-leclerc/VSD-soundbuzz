@@ -8,10 +8,10 @@ use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 
-class Library extends AbstractController
+class LibraryController extends AbstractController
 {
     /**
-     * @Route("/library")
+     * @Route("/library",  name="library")
      */
 
     public function getLibrary()
