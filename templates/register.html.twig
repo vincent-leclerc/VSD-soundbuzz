@@ -1,0 +1,48 @@
+
+{% extends "base.html.twig" %}
+
+
+
+{% block body %}
+            <link rel="stylesheet" href="{{ asset('build/app.css') }}" type="text/css"/>
+
+<form class="form-regis">
+  <label class="label-regis">
+    <p class="label-txt">Nom d'utilisateur</p>
+    <input type="text" class="input">
+    <div class="line-box">
+      <div class="line"></div>
+    </div>
+  </label>
+    <label class="label-regis">
+    <p class="label-txt">Date De Naissance</p>
+    <input type="date" class="input">
+    <div class="line-box">
+      <div class="line"></div>
+    </div>
+  </label>
+  <label class="label-regis">
+    <p class="label-txt">Mail</p>
+    <input type="text" class="input">
+    <div class="line-box">
+      <div class="line"></div>
+    </div>
+  </label>
+  <label class="label-regis">
+    <p class="label-txt">Mot de passe</p>
+    <input type="text" class="input">
+    <div class="line-box">
+      <div class="line"></div>
+    </div>
+  </label>
+  <button  class="button-regis" type="submit">Envoyer</button>
+</form>
+<div class="img-footer-register">
+    <img src="{{ asset('build/images/logo.svg') }}" height="100" width = "100" alt="logo SoundBuzz footer">
+</div>
+<div>
+    <p class="footer"> soundbuzz depuis 2002 </p>
+
+</div>
+{% endblock %}
+

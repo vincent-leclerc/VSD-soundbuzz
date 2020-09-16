@@ -87,13 +87,12 @@
     height: 50px;
 }
 
-.img-footer {
+.img-footer-register {
     float: right;
     position: relative;
-    margin-top: -8%;
+    margin-top: -3%;
 }
   
-
 @media screen and (min-width: 200px) and (max-width: 640px) {
     .form-regis {
       width: 100%;
