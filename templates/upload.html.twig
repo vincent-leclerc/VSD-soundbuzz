@@ -1,0 +1,26 @@
+{% extends "base.html.twig" %}
+
+
+{% block body %}
+<div style="margin-top: 6%;">
+<h1 class="title-upload">Faites entendre votre voix</h1>
+<p class="text-upload" >Rejoignez la communauté de créateurs la plus éclectique au monde, 
+composée d'artistes débutants comme des plus grands noms de l'industrie. Peu importe votre carrière ou votre statut, <span class="color-logo">SoundBuzz</span> vous accueille.</p>
+
+<div class="frame">
+	<div class="center">
+		<div class="title">
+			<p class ="h1-upload" >Drop file to upload</p>
+		</div>
+
+		<div class="dropzone">
+			<img src="http://100dayscss.com/codepen/upload.svg" class="upload-icon" />
+			<input type="file" class="upload-input" />
+		</div>
+
+		<button type="button" class="btn-upload" name="uploadbutton">Upload file</button>
+
+	</div>
+</div>
+</div>
+{% endblock %}
