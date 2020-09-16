@@ -1,0 +1,73 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Connectez-vous!{% endblock %}
+
+{% block body %}
+
+<style>
+.form-row {
+    margin-top: 10em;
+    margin-bottom: 10em;
+}
+
+.co-button {
+    background-color: #6f00ff !important;
+}
+
+.co-button:hover {
+    background-color: #fff !important;
+    color: #6f00ff !important;
+}
+
+.form-control:focus {
+    border-color: #6f00ff !important;
+    box-shadow: 0 0 0 0.2rem rgba(111, 0, 255, .25) !important;
+}
+</style>
+<container class="form-container">
+  <div class="row d-flex justify-content-center form-row">
+    <div class="col-md-6">
+        <form method="post" class="text-center border border-light p-5">
+            {% if error %}
+                <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+            {% endif %}
+
+            {% if app.user %}
+                <div class="mb-3">
+                    Vous êtes connecté en tant que {{ app.user.username }}, <a href="{{ path('app_logout') }}">Déconnexion</a>
+                </div>
+            {% endif %}
+
+            <h1 class="h4 mb-4 login-title">Se connecter</h1>
+            <label for="inputUsername">Nom d'utilisateur</label>
+            <input type="text" value="{{ last_username }}" name="username" id="inputUsername" class="form-control mb-4" required autofocus>
+            <label for="inputPassword">Mot de passe</label>
+            <input type="password" name="password" id="inputPassword" class="form-control mb-4" required>
+
+            <input type="hidden" name="_csrf_token"
+                value="{{ csrf_token('authenticate') }}"
+            >
+
+            {#
+                Uncomment this section and add a remember_me option below your firewall to activate remember me functionality.
+                See https://symfony.com/doc/current/security/remember_me.html
+
+                <div class="checkbox mb-3">
+                    <label>
+                        <input type="checkbox" name="_remember_me"> Remember me
+                    </label>
+                </div>
+            #}
+
+            <button class="btn btn-purple btn-block my-4 co-button" type="submit">
+                Connexion
+            </button>
+
+            <p>Pas encore membre?
+                <a href="{{ path('register') }}">Inscrivez-vous!</a>
+            </p>
+        </form>
+    </div>
+  </div>
+</container>
+{% endblock %}
