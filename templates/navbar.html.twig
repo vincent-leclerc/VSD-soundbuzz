@@ -36,6 +36,7 @@
           aria-labelledby="navbarDropdownMenuLink-333">
           {% if is_granted("IS_AUTHENTICATED_FULLY") %}
             <a class="dropdown-item" href="{{ path('profil') }}">Mon profil</a>
+            <a class="dropdown-item" href="{{ path('app_logout') }}">Déconnexion</a>
           {% else %}
             <a class="dropdown-item" href="{{ path('app_login') }}">Se connecter</a>
             <a class="dropdown-item" href="{{ path('app_register') }}">S'inscrire</a>
