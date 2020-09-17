@@ -7,10 +7,13 @@ SoundBuzz est un projet scolaire qui consiste à créer une application web de s
 * docker-compose up -d
 * yarn install
 * yarn encore dev
+* docker exec -it ID_DU_CONTAINER_PHP composer require symfony/security-bundle
+* docker exec -it ID_DU_CONTAINER_PHP php bin/console make:migration
+* docker exec -it ID_DU_CONTAINER_PHP php bin/console doctrine:migrations:migrate
 
 ## Ajout d'une page 
 
-- creer un controller dans le dossier src/Controller
+- créer un controller dans le dossier src/Controller
 - si besoin faire : 
     composer require annotations
 
